@@ -12,13 +12,9 @@ fn main() {
         process::exit(1);
     });
 
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.file_path);
-
     // can do it like so coz don't need return value
     // unlike config parsing
-    if let Err(e) = minigrep::run(config) {
-        println!("Application error: {e}");
+    if let Err(_) = minigrep::run(config) {
         process::exit(1);
     }
 }
